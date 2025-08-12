@@ -55,7 +55,7 @@ int main() {
     calcularDados(&carta1);
 
     // Entrada dos dados da segunda carta
-    printf("\nDigite o Estado da segunda carta: ");
+    printf("Digite o Estado da segunda carta: ");
     scanf(" %[^\n]", carta2.estado);
     printf("Digite o Código da segunda carta: ");
     scanf("%[^\n]", carta2.codigo);
