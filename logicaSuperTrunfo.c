@@ -15,7 +15,7 @@ struct Carta {
 };
 
 //Função para calcular densidade e PIB per capita
-void calcularDadosstruct Carta *carta) {
+void calcularDados(struct Carta *carta) {
     carta->densidadePopulacional = carta->populacao / carta->area;
     carta->pibPerCapita = carta->pib / carta->populacao;
 }
