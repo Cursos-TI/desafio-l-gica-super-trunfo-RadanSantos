@@ -27,7 +27,7 @@ void exibirCarta(struct Carta carta) {
     printf("\nCidade: %s", carta.nomeCidade);
     printf("\nPopulação: %d", carta.populacao);
     printf("\nÁrea: %2.f km²", carta.area);
-    printf("\PIB: %.2f bilhões", carta.pib);
+    printf("\nPIB: %.2f bilhões", carta.pib);
     printf("\nPontos Turísticos: %d", carta.pontosTuristicos);
     printf("\nDensidade Populacional: %.2f hab/km²", carta.densidadePopulacional);
     printf("\nPIB per Capita: %.2f\n", carta.pibPerCapita);
@@ -60,7 +60,7 @@ int main() {
     printf("Digite o Código da segunda carta: ");
     scanf("%[^\n]", carta2.codigo);
     printf("Digite o Nome da Cidade: ");
-    scnaf(" %[^\n]", carta2.nomeCidade);
+    scanf(" %[^\n]", carta2.nomeCidade);
     printf("Digite a População: ");
     scanf("%d", &carta2.populacao);
     printf("Digite a Área (km²): ");
