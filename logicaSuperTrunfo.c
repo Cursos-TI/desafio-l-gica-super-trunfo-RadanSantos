@@ -26,7 +26,7 @@ void exibirCarta(struct Carta carta) {
     printf("\nCódigo: %s", carta.codigo);
     printf("\nCidade: %s", carta.nomeCidade);
     printf("\nPopulação: %d", carta.populacao);
-    printf("\nÁrea: %2.f km²", carta.area);
+    printf("\nÁrea: %.2f km²", carta.area);
     printf("\nPIB: %.2f bilhões", carta.pib);
     printf("\nPontos Turísticos: %d", carta.pontosTuristicos);
     printf("\nDensidade Populacional: %.2f hab/km²", carta.densidadePopulacional);
@@ -58,7 +58,7 @@ int main() {
     printf("Digite o Estado da segunda carta: ");
     scanf(" %[^\n]", carta2.estado);
     printf("Digite o Código da segunda carta: ");
-    scanf("%[^\n]", carta2.codigo);
+    scanf(" %[^\n]", carta2.codigo);
     printf("Digite o Nome da Cidade: ");
     scanf(" %[^\n]", carta2.nomeCidade);
     printf("Digite a População: ");
@@ -75,7 +75,7 @@ int main() {
     // Exibição das cartas
     printf("\n--- Carta 1 ---");
     exibirCarta(carta1);
-    printf("\n--- Carta2 2 ---");
+    printf("\n--- Carta 2 ---");
     exibirCarta(carta2);
 
     // Menu interativo para escolher o atributo
@@ -93,7 +93,7 @@ int main() {
     switch (opcao) {
         case 1:
         printf("\nComparando População:\n");
-        printf("%s: %d hab | %s: &d hab\n", carta1.nomeCidade, carta1.populacao, carta2.nomeCidade, carta2.populacao);
+        printf("%s: %.2f km² | %s: %.2f km²\n", carta1.nomeCidade, carta1.area, carta2.nomeCidade, carta2.area);
         if (carta1.populacao > carta2.populacao)
         printf("Vencedor: %s\n", carta1.nomeCidade);
         else if (carta2.populacao > carta1.populacao)
@@ -149,8 +149,19 @@ int main() {
         default:
         printf("Opção inválida!\n");
         break;
+
+        case 6:
+        printf("\nComparando PIB per Capita:\n");
+        printf("%s: %.2f | %s: %.2f\n", carta1.nomeCidade, carta1.pibPerCapita, carta2.nomeCidade, carta2.pibPerCapita);
+        if (carta1.pibPerCapita > carta2.pibPerCapita)
+        printf("Vencedor: %s\n", carta1.nomeCidade);
+        else if (carta2.pibPerCapita > carta1.pibPerCapita)
+        printf("Vencedor: %s\n", carta2.nomeCidade);
+        else
+        printf("Empate!\n");
+    break;
+
     }
-}
 
 return 0;
 }
