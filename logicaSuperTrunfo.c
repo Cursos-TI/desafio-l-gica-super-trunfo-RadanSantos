@@ -148,4 +148,9 @@ int main() {
 
         default:
         printf("Opção inválida!\n");
+        break;
     }
+}
+
+return 0;
+}
